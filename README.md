@@ -27,14 +27,31 @@ Tools and Technologies
 
 The implementation is based on Python and widely used scientific and machine learning libraries. Numerical computation and signal processing are handled using NumPy and SciPy, visualization is performed with Matplotlib, and machine learning models are implemented using Scikit-learn. The project integrates radar DSP concepts with modern data-driven techniques in a unified software framework.
 
-Industry Relevance
+##  Results
 
-This project is directly relevant to real-world applications such as automotive radar systems, surveillance and defense platforms, RF sensing solutions, and motion or activity recognition systems. It demonstrates the ability to bridge theoretical radar concepts with practical signal processing and machine learning implementation, a key requirement in modern radar and RF engineering roles.
+### 1️⃣ Range–Doppler Map
+The first figure shows the **Range–Doppler Map**, where each bright region corresponds to a simulated target at a particular range and radial velocity.
 
-License
+| Range–Doppler Map |
+|-------------------|
+| ![Range–Doppler Map](figures/q1.png) |
 
-The project is released under the MIT License, allowing free use, modification, and distribution for both academic and commercial purposes.
+---
 
-Author
+### 2️⃣ Micro-Doppler-Like Signature
+At the strongest range bin, the script extracts the slow-time signal and computes a **spectrogram**, giving a micro-Doppler-like signature that reflects the velocity variations of the target over time.
 
-Developed as an Electrical Engineering project with a focus on radar systems, RF signal processing, and machine learning, intended for use as a professional engineering portfolio project.
+| Micro-Doppler Spectrogram |
+|---------------------------|
+| ![Micro-Doppler Spectrogram](figures/q2.png) |
+
+---
+
+### 3️⃣ ML Feature Space
+The final figure shows the **feature space** (e.g., mean vs max velocity) with different classes labelled, giving intuition about how well the RF-inspired features separate Human, Car, and Drone motion.
+
+| Feature Space (Human / Car / Drone) |
+|-------------------------------------|
+| ![Feature Space](figures/q3.png) |
+
+The script prints the **classification accuracy** in the MATLAB command window, giving a quick sense of how well the simple SVM model performs on the synthetic dataset.
