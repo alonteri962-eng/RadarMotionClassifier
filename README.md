@@ -43,7 +43,7 @@ At the strongest range bin, the script extracts the slow-time signal and compute
 
 | Micro-Doppler Spectrogram |
 |---------------------------|
-| ![Micro-Doppler Spectrogram](figures/q2.png) |
+| ![Micro-Doppler Spectrogram](docs/images/untitled1.jpg) |
 
 ---
 
