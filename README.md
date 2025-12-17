@@ -52,6 +52,6 @@ The final figure shows the **feature space** (e.g., mean vs max velocity) with d
 
 | Feature Space (Human / Car / Drone) |
 |-------------------------------------|
-| ![Feature Space](figures/q3.png) |
+| ![Feature Space](docs/images/untitled.jpg) |
 
 The script prints the **classification accuracy** in the MATLAB command window, giving a quick sense of how well the simple SVM model performs on the synthetic dataset.
