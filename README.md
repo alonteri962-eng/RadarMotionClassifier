@@ -55,3 +55,24 @@ The final figure shows the **feature space** (e.g., mean vs max velocity) with d
 | ![Feature Space](docs/images/ML.jpg) |
 
 The script prints the **classification accuracy** in the MATLAB command window, giving a quick sense of how well the simple SVM model performs on the synthetic dataset.
+
+
+Note on Signal Distortion and Modified Mixing Approach
+
+During development, it was observed that the classical radar “mixing” stage did not produce accurate results when applied directly in the synthetic MATLAB implementation. In an ideal FMCW radar receiver, the intermediate frequency (beat frequency) should be obtained by multiplying the transmitted signal with the conjugated received echo, causing the carrier frequency f_c to cancel out and leaving only the frequency difference that represents target range and radial velocity. Mathematically, this operation is expected to subtract the phases of the TX and RX signals and remove the carrier component.
+
+However, when performing this step using adjacent IQ samples—specifically by computing the product of the transmitted matrix with the received matrix chirp-by-chirp—the resulting signal became noticeably distorted. Instead of cleanly canceling f_c, the phase subtraction between closely spaced complex vectors introduced warping effects and numerical artifacts that degraded the range–Doppler representation and corrupted the extracted features. This distortion is mainly due to imperfect alignment and the fact that the generated signals are not exact analytical replicas of real hardware waveforms.
+
+To overcome this issue, a custom processing chain was implemented that bypasses the inaccurate mix operation. The modified code constructs the beat signal while ignoring the explicit carrier term and focuses only on processing the slow-time and fast-time components derived from the received echoes. A dedicated script was written to perform range and Doppler processing without relying on direct multiplication with the TX reference, resulting in more stable and realistic maps.
+
+This alternative approach—effectively creating a “mix with carrier-independent processing”—allowed the project to proceed with reliable FFT-based estimation and machine learning classification, even though the implementation deviates from the textbook mixer structure. The workaround reflects a practical engineering decision to prioritize functional performance over strict adherence to the conventional mixing block.
+
+### 1️⃣ Range–Doppler Map
+The first figure shows the **Range–Doppler Map**, where each bright region corresponds to a simulated target at a particular range and radial velocity.
+
+| Range–Doppler Map |
+|-------------------|
+| ![Range–Doppler Map](docs/images/range_doppler.jpg) |
+
+---
+
