@@ -43,7 +43,7 @@ At the strongest range bin, the script extracts the slow-time signal and compute
 
 | Micro-Doppler Spectrogram |
 |---------------------------|
-| ![Micro-Doppler Spectrogram](docs/images/untitled1.jpg) |
+| ![Micro-Doppler Spectrogram](docs/images/micro_doppler.jpg) |
 
 ---
 
@@ -52,6 +52,6 @@ The final figure shows the **feature space** (e.g., mean vs max velocity) with d
 
 | Feature Space (Human / Car / Drone) |
 |-------------------------------------|
-| ![Feature Space](docs/images/untitled.jpg) |
+| ![Feature Space](docs/images/ML.jpg) |
 
 The script prints the **classification accuracy** in the MATLAB command window, giving a quick sense of how well the simple SVM model performs on the synthetic dataset.
