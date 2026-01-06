@@ -34,7 +34,7 @@ The first figure shows the **Range–Doppler Map**, where each bright region cor
 
 | Range–Doppler Map |
 |-------------------|
-| ![Range–Doppler Map](docs/images/untitled2.jpg) |
+| ![Range–Doppler Map](docs/images/range_doppler.jpg) |
 
 ---
 
