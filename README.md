@@ -72,7 +72,7 @@ The first figure shows the **Range–Doppler Map**, where each bright region cor
 
 | Range–Doppler Map |
 |-------------------|
-| ![Range–Doppler Map](docs/images/range_doppler.jpg) |
+| ![Range–Doppler Map](docs/images/RadarMotion_Fix.jpg) |
 
 ---
 
